@@ -68,6 +68,11 @@ try {
     $events = $calendar->getAllEvents();
 
     /** @var Event $event */
+
+    if (empty($events)) {
+        echo ("No events found that satisfy those conditions\n\n");
+    }
+
     foreach ($events as $event) {
         echo ("-------------------------\n");
         echo ("Occasion: {$event->getOccasion()}\n");
